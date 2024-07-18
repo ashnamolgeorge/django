@@ -1,0 +1,47 @@
+{% extends 'userface.html' %}
+{% block another %}
+<div class="col-lg-6">
+    <div class="contact-us-form">
+        <h2>Contact With Us</h2>
+        <p>If you have any questions please fell free to contact with us.</p>
+        <!-- Form -->
+        <form class="form" method="post" action="{% url 'Register' %}">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" name="name" placeholder="Name" required="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="">email</label>
+                        <input type="email" name="email" placeholder="Email" required="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="">password</label>
+                        <input type="password" name="password" placeholder="password" required="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="">contact</label>
+                        <input type="number" name="contact" placeholder="contact" required="">
+                    </div>
+                </div>
+               
+                <div class="col-12">
+                    <div class="form-group login-btn">
+                        <button class="btn" type="submit">submit</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+        <!--/ End Form -->
+    </div>
+</div>
+{% endblock %}

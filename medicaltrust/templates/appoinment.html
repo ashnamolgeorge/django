@@ -1,0 +1,10 @@
+{% extends 'booking.html' %}
+{% block another %}
+{% csrf_token %}
+<div class="col-lg-6">
+    <div class="contact-us-form">
+        <h2>YOUR BOOKING IS SAFE</h2>
+        <BUtton type="submit">book again</BUtton>
+    </div>
+</div>
+{% endblock %}

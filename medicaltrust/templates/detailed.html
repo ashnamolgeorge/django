@@ -1,0 +1,37 @@
+{% extends 'userface.html' %}
+
+{% block content %}
+<div class="row">
+
+  {% for i in data %}
+  <!-- Single Table -->
+  <div class="col-lg-4 col-md-12 col-12">
+    <div class="single-table">
+      <!-- Table Head -->
+      <div class="table-head">
+        <div class="icon">
+          <img src="{{i.doctor_image.url}}" style="height: 200px;" alt="">
+        </div>
+        <h4 class="title">{{i.category}}</h4>
+        <div class="price">
+          <p class="amount">$199<span>/ Per Visit</span></p>
+        </div>	
+      </div>
+      <!-- Table List -->
+      <ul class="table-list">
+        <li><i class="icofont icofont-ui-check"></i> <b>{{i.doctors_name}}</b></li>
+      </ul>
+      <div class="table-bottom">
+        <a class="btn" href="{% url 'list' id=i.id %}">view more</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+      
+    
+      
+      
+    
+ 
+{% endblock %}
